@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>IHM Catholic Church</title>
+
+<style>
+#church{
+  padding-left: 200px;
+  widows: 100%;
+  height:auto;
+}
+p{
+  padding-left: 0px;
+}
+
+.column  {
+  float: right;
+  width: 40%;
+  padding: 10px;
+  height: auto;
+  margin-left: 0px;
+  display:block;
+ /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2{
+  text-align: center;
+}
+
+p{
+  float:left;
+}
+.gallery{
+  margin-right:0px;
+}
+div.top{
+  text-align: center;
+}
+
+
+</style>
+  
+  </head>
+  <body>
+  <div class="header">
+    <h1>Immaculate Heart of Mary</h1>
+  </div>
+ 
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="sacraments.html">Sacraments</a>
+        <a href="contact.html">Contact</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="news.html">Online Giving</a>
+        <a href="bullet.html">Bulletins</a>
+      </div>
+
+    <br>
+
+<div id="wrapper">
+  <div class="container">
+      <div class="top"><h1>Welcome, to our Parish community.</h1></div>
+        
+      
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="gallery">
+                <a target="_blank" href="church.jpg">
+                  <img src="church.jpg" alt="Mountains" width="500" height="300">
+                </a>
+              </div>
+              <br>
+
+        
+            <div class="column" style="background-color:white">
+                <p>     
+                  Welcome to Immaculate Heart of Mary Catholic Church in Hays, Kansas. Our Mission
+                    United in Love to Joyfully Serve
+                    The IHM parish family will carry out our mission of Love and Service by:
+                    Demonstrating respect for all people
+                    Seeking unity with the Lord Jesus and one another
+                    Worshiping and praying through the celebration of the sacraments
+                    Promoting the spiritual, psychological, emotional, and social well-being of our faith community
+                    Supporting continued faith 
+                    development for all ages
+                    Pledging our resources of time, talent and treasure to guide us on our journey to God.</p>
+              </div>
+ 
+            </div>
+  
+            <h2>Please fill out the form below to register at IHM, Hays.</h2>
+
+
+
+
+            <script>
+                function statusChangeCallback(response) {
+                  // Called with the results from FB.getLoginStatus().
+                  console.log("statusChangeCallback");
+                  console.log(response); // The current login status of the person.
+                  if (response.status === "connected") {
+                    // Logged into your webpage and Facebook.
+                    testAPI();
+                  } else {
+                    // Not logged into your webpage or we are unable to tell.
+                    document.getElementById("status").innerHTML =
+                      "Please log " + "into this webpage.";
+                  }
+                }
+          
+                function checkLoginState() {
+                  // Called when a person is finished with the Login Button.
+                  FB.getLoginStatus(function (response) {
+                    // See the onlogin handler
+                    statusChangeCallback(response);
+                  });
+                }
+          
+                window.fbAsyncInit = function () {
+                  FB.init({
+                    appId: "280475169749422",
+                    cookie: true, // Enable cookies to allow the server to access the session.
+                    xfbml: true, // Parse social plugins on this webpage.
+                    version: "{api-version}", // Use this Graph API version for this call.
+                  });
+          
+                  FB.getLoginStatus(function (response) {
+                    // Called after the JS SDK has been initialized.
+                    statusChangeCallback(response); // Returns the login status.
+                  });
+                };
+          
+                (function (d, s, id) {
+                  // Load the SDK asynchronously
+                  var js,
+                    fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://connect.facebook.net/en_US/all.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                })(document, "script", "facebook-jssdk");
+          
+                function testAPI() {
+                  // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+                  console.log("Welcome!  Fetching your information.... ");
+                  FB.api("/me", function (response) {
+                    console.log("Successful login for: " + response.name);
+                    document.getElementById("status").innerHTML =
+                      "Thanks for logging in, " + response.name + "!";
+                  });
+                }
+              </script>
+          
+              // The JS SDK Login Button
+          
+              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+              </fb:login-button>
+          
+              <div id="status"></div>
+
+
+
+
+
+
+
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" value=""><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+    </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+ 
+ 
+  </body>
+</html>
